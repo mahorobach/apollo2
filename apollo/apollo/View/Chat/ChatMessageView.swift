@@ -31,7 +31,7 @@ struct ChatMessageView: View {
             Spacer()
             ZStack(alignment: .trailing){
 //                TextField("Message...", text: $viewModel.messageText, axis: .vertical)
-                TextField("メッセージを記入...", text: $messangeText, axis: .vertical)
+                TextField("Message...", text: $messangeText, axis: .vertical)
                     .padding(12)
                     .padding(.trailing, 48)
                     .background(Color(.systemGroupedBackground))
@@ -41,9 +41,9 @@ struct ChatMessageView: View {
                 Button {
  //                   viewModel.sendMessage()
   //                  viewModel.messageText = ""
-                    print("メッセージを送りました。")
+                    print("Send message")
                 } label: {
-                    Text("送信")
+                    Text("Send")
                         .fontWeight(.semibold)
                 }
                 .padding(.horizontal)
