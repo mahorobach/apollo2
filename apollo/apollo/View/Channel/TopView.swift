@@ -18,7 +18,7 @@ struct TopView: View {
     @State private var selectedTab: Tabs = .tab1
     
     init(){
-        UITabBar.appearance().backgroundColor = .white.withAlphaComponent(0.3)
+        UITabBar.appearance().backgroundColor = .white.withAlphaComponent(0.4)
     }
     
        
