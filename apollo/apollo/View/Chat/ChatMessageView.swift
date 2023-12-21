@@ -41,9 +41,9 @@ struct ChatMessageView: View {
                 Button {
  //                   viewModel.sendMessage()
   //                  viewModel.messageText = ""
-                    print("Send message")
+                    print("メッセージを送りました。")
                 } label: {
-                    Text("送る")
+                    Text("送信")
                         .fontWeight(.semibold)
                 }
                 .padding(.horizontal)
