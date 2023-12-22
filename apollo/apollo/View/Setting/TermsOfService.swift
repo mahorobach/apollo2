@@ -33,6 +33,7 @@ struct TermsOfService: View {
                         .font(.system(size: 18))
                 }
             }
+            .padding()
         }
     }
 }
