@@ -266,7 +266,7 @@ struct LoginView2: View {
                         
                     }
                     .fullScreenCover(isPresented: $isShowing2) {
-                        Privacy()
+                        Privacy(bunsho:termsPrivacyArray[0])
                     }
                     .background(Color(.systemGray6))
                     Spacer()

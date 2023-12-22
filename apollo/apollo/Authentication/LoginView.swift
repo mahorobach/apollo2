@@ -38,7 +38,7 @@ struct LoginView: View {
                         .font(.headline)
                         .foregroundStyle(.blue)
                     ScrollView{
-                        TermsOfService()
+                        TermsOfService(bunsho:termsPrivacyArray[0])
                     }
                     .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                     .border(.cyan, width:0.5)
@@ -74,7 +74,7 @@ struct LoginView: View {
                         
                     }
                     .fullScreenCover(isPresented: $isShowing2) {
-                        Privacy()
+                        Privacy(bunsho:termsPrivacyArray[0])
                     }
                     .background(Color(.systemGray6))
                     Spacer()

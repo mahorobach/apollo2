@@ -12,10 +12,6 @@ struct ChatMessageView: View {
     var body: some View {
         VStack {
             ScrollView{
-                //header
-                
-                //messages
-                
                 LazyVStack{
 //                    ForEach(viewModel.messages) { message in
 //                        ChatMessageCell(message: message)
@@ -24,8 +20,6 @@ struct ChatMessageView: View {
                         ChatMessageCell(isFromCurrentUser: Bool.random())
                     }
                 }
-                
-                
             }
             //message input view
             Spacer()
@@ -43,7 +37,7 @@ struct ChatMessageView: View {
   //                  viewModel.messageText = ""
                     print("Send message")
                 } label: {
-                    Text("Send")
+                    Text("送る")
                         .fontWeight(.semibold)
                 }
                 .padding(.horizontal)
