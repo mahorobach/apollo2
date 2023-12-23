@@ -212,9 +212,9 @@
 			children = (
 				C0C0B0C22B1FEDD000D16885 /* TitleList.swift */,
 				C0113EAF2B2E49D100302446 /* User.swift */,
+				C03D0CF72B353F6A00DB36B7 /* TermsAndPrivacyData.swift */,
 				C077657B2B31137F00EFBB81 /* Message.swift */,
 				C07765F42B33105600EFBB81 /* MessageData.swift */,
-				C03D0CF72B353F6A00DB36B7 /* TermsAndPrivacyData.swift */,
 				C07765F22B32C08C00EFBB81 /* ModelData.swift */,
 				C07765F02B32C08400EFBB81 /* Landmark.swift */,
 			);

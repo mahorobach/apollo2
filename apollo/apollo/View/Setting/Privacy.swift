@@ -27,7 +27,7 @@ struct Privacy: View {
                     .foregroundColor(.blue)
                 }
                 ToolbarItem(placement: .principal) {
-                    Text("プライバシーポリシー")
+                    Text(bunsho.title)
                         .foregroundColor(.blue)
                         .font(.system(size: 18))
                 }

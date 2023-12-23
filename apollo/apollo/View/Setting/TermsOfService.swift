@@ -28,7 +28,7 @@ struct TermsOfService: View {
                     .foregroundColor(.blue)
                 }
                 ToolbarItem(placement: .principal) {
-                    Text("利用規約")
+                    Text(bunsho.title)
                         .foregroundColor(.blue)
                         .font(.system(size: 18))
                 }
