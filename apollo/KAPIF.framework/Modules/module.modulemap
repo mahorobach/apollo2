@@ -1,0 +1,4 @@
+framework module KAPIF {
+  header "KAPIF-Swift.h"
+  requires objc
+}

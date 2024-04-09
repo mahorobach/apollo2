@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C002C8E12B55182B00FFBC79 /* PrivacyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002C8E02B55182B00FFBC79 /* PrivacyModel.swift */; };
 		C00847D62B296ECB00513AD1 /* MailMagaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00847D52B296ECB00513AD1 /* MailMagaData.swift */; };
 		C00847DA2B29784000513AD1 /* MailMagaRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00847D92B29784000513AD1 /* MailMagaRowView.swift */; };
 		C0113EAC2B2DFCBD00302446 /* ChatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0113EAB2B2DFCBD00302446 /* ChatMessageView.swift */; };
@@ -20,7 +21,6 @@
 		C07765782B3110DD00EFBB81 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07765772B3110DD00EFBB81 /* ChatBubble.swift */; };
 		C077657A2B31116C00EFBB81 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07765792B31116C00EFBB81 /* ChatMessageCell.swift */; };
 		C077657C2B31137F00EFBB81 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C077657B2B31137F00EFBB81 /* Message.swift */; };
-		C077657F2B3126F200EFBB81 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C077657E2B3126F200EFBB81 /* test.swift */; };
 		C07765812B3128EC00EFBB81 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07765802B3128EC00EFBB81 /* LoginView.swift */; };
 		C07765832B314EAE00EFBB81 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07765822B314EAE00EFBB81 /* Verification.swift */; };
 		C07765852B318EA200EFBB81 /* LoginView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07765842B318EA200EFBB81 /* LoginView2.swift */; };
@@ -30,6 +30,8 @@
 		C07765F52B33105600EFBB81 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07765F42B33105600EFBB81 /* MessageData.swift */; };
 		C07BFED12B2C592D00EF18E0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07BFED02B2C592D00EF18E0 /* MainTabView.swift */; };
 		C07BFED32B2C6E5C00EF18E0 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07BFED22B2C6E5C00EF18E0 /* ChatRow.swift */; };
+		C0AC6DB82BC4CE080086EEF4 /* KAPIF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AC6DB72BC4CE080086EEF4 /* KAPIF.framework */; };
+		C0AC6DB92BC4CE080086EEF4 /* KAPIF.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AC6DB72BC4CE080086EEF4 /* KAPIF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0C0B0B42B1FDFB300D16885 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0B0B32B1FDFB300D16885 /* TopView.swift */; };
 		C0C0B0B62B1FE41C00D16885 /* ChannelTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0B0B52B1FE41C00D16885 /* ChannelTabView.swift */; };
 		C0C0B0B82B1FE44A00D16885 /* ChatTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0B0B72B1FE44A00D16885 /* ChatTabView.swift */; };
@@ -48,9 +50,25 @@
 		C0CCA5AB2B2F3F370000F256 /* ChatContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCA5AA2B2F3F370000F256 /* ChatContact.swift */; };
 		C0CCA5AD2B2F47300000F256 /* ChatRow2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCA5AC2B2F47300000F256 /* ChatRow2.swift */; };
 		C0CCA5AF2B2F47DF0000F256 /* ChatTitleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCA5AE2B2F47DF0000F256 /* ChatTitleData.swift */; };
+		C0F695DE2BB616B2003743A8 /* PrivacyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F695DD2BB616B2003743A8 /* PrivacyTest.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C0AC6DB62BC4CD9D0086EEF4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C0AC6DB92BC4CE080086EEF4 /* KAPIF.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C002C8E02B55182B00FFBC79 /* PrivacyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyModel.swift; sourceTree = "<group>"; };
 		C00847D52B296ECB00513AD1 /* MailMagaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailMagaData.swift; sourceTree = "<group>"; };
 		C00847D92B29784000513AD1 /* MailMagaRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailMagaRowView.swift; sourceTree = "<group>"; };
 		C0113EAB2B2DFCBD00302446 /* ChatMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageView.swift; sourceTree = "<group>"; };
@@ -64,7 +82,6 @@
 		C07765772B3110DD00EFBB81 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		C07765792B31116C00EFBB81 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		C077657B2B31137F00EFBB81 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		C077657E2B3126F200EFBB81 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		C07765802B3128EC00EFBB81 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C07765822B314EAE00EFBB81 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		C07765842B318EA200EFBB81 /* LoginView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView2.swift; sourceTree = "<group>"; };
@@ -74,6 +91,8 @@
 		C07765F42B33105600EFBB81 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		C07BFED02B2C592D00EF18E0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C07BFED22B2C6E5C00EF18E0 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
+		C0AC6DB32BC4CD860086EEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C0AC6DB72BC4CE080086EEF4 /* KAPIF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KAPIF.framework; sourceTree = "<group>"; };
 		C0C0B0B32B1FDFB300D16885 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		C0C0B0B52B1FE41C00D16885 /* ChannelTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabView.swift; sourceTree = "<group>"; };
 		C0C0B0B72B1FE44A00D16885 /* ChatTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabView.swift; sourceTree = "<group>"; };
@@ -93,6 +112,8 @@
 		C0CCA5AA2B2F3F370000F256 /* ChatContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContact.swift; sourceTree = "<group>"; };
 		C0CCA5AC2B2F47300000F256 /* ChatRow2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow2.swift; sourceTree = "<group>"; };
 		C0CCA5AE2B2F47DF0000F256 /* ChatTitleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTitleData.swift; sourceTree = "<group>"; };
+		C0F695DA2BB4C70A003743A8 /* project.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = project.xcworkspace; path = apollo.xcodeproj/project.xcworkspace; sourceTree = "<group>"; };
+		C0F695DD2BB616B2003743A8 /* PrivacyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0AC6DB82BC4CE080086EEF4 /* KAPIF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +159,8 @@
 				C012B21C2B20C2B100EF072C /* TermsOfService.swift */,
 				C012B21E2B20C31800EF072C /* Privacy.swift */,
 				C0CCA5A72B2F18810000F256 /* Account.swift */,
+				C002C8E02B55182B00FFBC79 /* PrivacyModel.swift */,
+				C0F695DD2BB616B2003743A8 /* PrivacyTest.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -150,6 +174,15 @@
 				C0CCA5AA2B2F3F370000F256 /* ChatContact.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		C02114C02B482BFD0074979D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0AC6DB72BC4CE080086EEF4 /* KAPIF.framework */,
+				C0F695DA2BB4C70A003743A8 /* project.xcworkspace */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C077657D2B311AD300EFBB81 /* Authentication */ = {
@@ -177,7 +210,6 @@
 		C0C0B0B12B1F594D00D16885 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C077657E2B3126F200EFBB81 /* test.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +258,7 @@
 			children = (
 				C0CBC27F2ADE544000AB9737 /* apollo */,
 				C0CBC27E2ADE544000AB9737 /* Products */,
+				C02114C02B482BFD0074979D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,6 +273,7 @@
 		C0CBC27F2ADE544000AB9737 /* apollo */ = {
 			isa = PBXGroup;
 			children = (
+				C0AC6DB32BC4CD860086EEF4 /* Info.plist */,
 				C0CBC2802ADE544000AB9737 /* apolloApp.swift */,
 				C0C0B0B12B1F594D00D16885 /* Controllers */,
 				C077657D2B311AD300EFBB81 /* Authentication */,
@@ -284,12 +318,15 @@
 				C0CBC2792ADE544000AB9737 /* Sources */,
 				C0CBC27A2ADE544000AB9737 /* Frameworks */,
 				C0CBC27B2ADE544000AB9737 /* Resources */,
+				C0AC6DB62BC4CD9D0086EEF4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = apollo;
+			packageProductDependencies = (
+			);
 			productName = apollo;
 			productReference = C0CBC27D2ADE544000AB9737 /* apollo.app */;
 			productType = "com.apple.product-type.application";
@@ -300,7 +337,7 @@
 		C0CBC2752ADE544000AB9737 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
+				BuildIndependentTargetsInParallel = NO;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
@@ -318,6 +355,8 @@
 				Base,
 			);
 			mainGroup = C0CBC2742ADE544000AB9737;
+			packageReferences = (
+			);
 			productRefGroup = C0CBC27E2ADE544000AB9737 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -348,7 +387,6 @@
 				C0C0B0C92B20A43000D16885 /* Contact.swift in Sources */,
 				C0C0B0C52B20A2D800D16885 /* TitleRow2.swift in Sources */,
 				C0CCA5AF2B2F47DF0000F256 /* ChatTitleData.swift in Sources */,
-				C077657F2B3126F200EFBB81 /* test.swift in Sources */,
 				C0C0B0B62B1FE41C00D16885 /* ChannelTabView.swift in Sources */,
 				C0113EAC2B2DFCBD00302446 /* ChatMessageView.swift in Sources */,
 				C07765F52B33105600EFBB81 /* MessageData.swift in Sources */,
@@ -374,7 +412,9 @@
 				C0C0B0C12B1FEAA100D16885 /* TitleData.swift in Sources */,
 				C00847D62B296ECB00513AD1 /* MailMagaData.swift in Sources */,
 				C0C0B0C72B20A3D300D16885 /* MailMaga.swift in Sources */,
+				C002C8E12B55182B00FFBC79 /* PrivacyModel.swift in Sources */,
 				C0CCA5AD2B2F47300000F256 /* ChatRow2.swift in Sources */,
+				C0F695DE2BB616B2003743A8 /* PrivacyTest.swift in Sources */,
 				C0CBC2812ADE544000AB9737 /* apolloApp.swift in Sources */,
 				C07765F32B32C08C00EFBB81 /* ModelData.swift in Sources */,
 				C07765832B314EAE00EFBB81 /* Verification.swift in Sources */,
@@ -427,6 +467,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/akaohiroshi/path-to-framework-parent-directory ";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -441,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -490,6 +531,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/akaohiroshi/path-to-framework-parent-directory ";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -498,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -518,22 +560,30 @@
 				DEVELOPMENT_ASSET_PATHS = "\"apollo/Preview Content\"";
 				DEVELOPMENT_TEAM = D5A9Q686FW;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = apollo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.marune.it-gakkou.akao.apollo.apollo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 17.4;
 			};
 			name = Debug;
 		};
@@ -547,22 +597,30 @@
 				DEVELOPMENT_ASSET_PATHS = "\"apollo/Preview Content\"";
 				DEVELOPMENT_TEAM = D5A9Q686FW;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = apollo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.marune.it-gakkou.akao.apollo.apollo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 17.4;
 			};
 			name = Release;
 		};
