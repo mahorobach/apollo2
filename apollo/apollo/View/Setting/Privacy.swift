@@ -11,8 +11,8 @@ import KAPIF
 struct Privacy: View {
     @Environment(\.dismiss) var dismiss
     let bunsho:TermsAndPrivacyData
-    let bunsho2 = KAPIF.version
- //   let bunsho2 = KAPIF.KAPI(delegate: <#T##any KAPIDelegate#>)
+  
+    let bunsho2 = KAPIF.KAPI(delegate: <#T##any KAPIDelegate#>)
     
     var body: some View {
         NavigationStack {

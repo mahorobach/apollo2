@@ -30,8 +30,8 @@
 		C07765F52B33105600EFBB81 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07765F42B33105600EFBB81 /* MessageData.swift */; };
 		C07BFED12B2C592D00EF18E0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07BFED02B2C592D00EF18E0 /* MainTabView.swift */; };
 		C07BFED32B2C6E5C00EF18E0 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07BFED22B2C6E5C00EF18E0 /* ChatRow.swift */; };
-		C0AC6DB82BC4CE080086EEF4 /* KAPIF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AC6DB72BC4CE080086EEF4 /* KAPIF.framework */; };
-		C0AC6DB92BC4CE080086EEF4 /* KAPIF.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AC6DB72BC4CE080086EEF4 /* KAPIF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C07DEFFC2C134041001866A8 /* KAPIF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07DEFFB2C134041001866A8 /* KAPIF.framework */; };
+		C07DEFFD2C134041001866A8 /* KAPIF.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C07DEFFB2C134041001866A8 /* KAPIF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0C0B0B42B1FDFB300D16885 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0B0B32B1FDFB300D16885 /* TopView.swift */; };
 		C0C0B0B62B1FE41C00D16885 /* ChannelTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0B0B52B1FE41C00D16885 /* ChannelTabView.swift */; };
 		C0C0B0B82B1FE44A00D16885 /* ChatTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0B0B72B1FE44A00D16885 /* ChatTabView.swift */; };
@@ -54,13 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C0AC6DB62BC4CD9D0086EEF4 /* Embed Frameworks */ = {
+		C07DEFFE2C134041001866A8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C0AC6DB92BC4CE080086EEF4 /* KAPIF.framework in Embed Frameworks */,
+				C07DEFFD2C134041001866A8 /* KAPIF.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,8 +91,8 @@
 		C07765F42B33105600EFBB81 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		C07BFED02B2C592D00EF18E0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C07BFED22B2C6E5C00EF18E0 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
+		C07DEFFB2C134041001866A8 /* KAPIF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KAPIF.framework; sourceTree = "<group>"; };
 		C0AC6DB32BC4CD860086EEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C0AC6DB72BC4CE080086EEF4 /* KAPIF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KAPIF.framework; sourceTree = "<group>"; };
 		C0C0B0B32B1FDFB300D16885 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		C0C0B0B52B1FE41C00D16885 /* ChannelTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabView.swift; sourceTree = "<group>"; };
 		C0C0B0B72B1FE44A00D16885 /* ChatTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabView.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AC6DB82BC4CE080086EEF4 /* KAPIF.framework in Frameworks */,
+				C07DEFFC2C134041001866A8 /* KAPIF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +179,7 @@
 		C02114C02B482BFD0074979D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0AC6DB72BC4CE080086EEF4 /* KAPIF.framework */,
+				C07DEFFB2C134041001866A8 /* KAPIF.framework */,
 				C0F695DA2BB4C70A003743A8 /* project.xcworkspace */,
 			);
 			name = Frameworks;
@@ -318,7 +318,7 @@
 				C0CBC2792ADE544000AB9737 /* Sources */,
 				C0CBC27A2ADE544000AB9737 /* Frameworks */,
 				C0CBC27B2ADE544000AB9737 /* Resources */,
-				C0AC6DB62BC4CD9D0086EEF4 /* Embed Frameworks */,
+				C07DEFFE2C134041001866A8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,7 +432,7 @@
 		C0CBC2892ADE544200AB9737 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -467,7 +467,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				FRAMEWORK_SEARCH_PATHS = "/Users/akaohiroshi/path-to-framework-parent-directory ";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -496,7 +496,7 @@
 		C0CBC28A2ADE544200AB9737 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -531,7 +531,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				FRAMEWORK_SEARCH_PATHS = "/Users/akaohiroshi/path-to-framework-parent-directory ";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
