@@ -9,11 +9,9 @@ import SwiftUI
 import KAPIF
 
 struct PrivacyTest: View {
-    let bunsho2 = KAPI.version
-    
-    
+    let bunsho = KAPI.version
     var body: some View {
-        Text("test")
+        Text(String(bunsho))
     }
 }
 

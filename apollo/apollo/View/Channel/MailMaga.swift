@@ -6,15 +6,31 @@
 //
 
 import SwiftUI
+/*
+ public struct ChannelInfo : Identifiable {
+
+     /// The stable identity of the entity associated with this instance.
+     public let id: Data
+
+     public let title: String
+
+     public let naiyou: String
+
+     public let isMidoku: Bool
+ }
+ */
 
 struct MailMaga: View {
     @State private var isShowAlert = false
     @Environment(\.dismiss) var dismiss
+    weak  var delegate: DummyDelegate?
+    let alertText2 = ApolloApp().kapi.getTermsAndConditions()
     
     
     var body: some View {
         NavigationStack{
             ScrollView{
+                
                 LazyVStack{
                     ForEach(mailmagaArray){
                         MailMagaData in
@@ -51,7 +67,7 @@ struct MailMaga: View {
                     Button(action: {
                         isShowAlert = true
                     }) {
-                        Label("送信", systemImage: "pipeline")
+                        Label("送信", systemImage: "tray.and.arrow.up")
                             .foregroundStyle(.gray)
                         
                     }.alert("", isPresented: $isShowAlert) {
@@ -59,7 +75,8 @@ struct MailMaga: View {
                         }
                         
                     } message: {
-                        Text("KAGURAはメルマガ痩身用アプリとなり、\n 意見交換、質問の受付は承っておりません。\n\n以前よりご意見やご質問の返信は\n控えていただくようお願いしておりましたが、\n現在も多数のメッセージ送信が続くため\n返信機能は停止しております。")
+  //                      Text("KAGURAはメルマガ痩身用アプリとなり、\n 意見交換、質問の受付は承っておりません。\n\n以前よりご意見やご質問の返信は\n控えていただくようお願いしておりましたが、\n現在も多数のメッセージ送信が続くため\n返信機能は停止しております。")
+                        Text(alertText2)
                     }
                 }
             }

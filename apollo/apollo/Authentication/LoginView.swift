@@ -9,9 +9,11 @@ import SwiftUI
 
 
 struct LoginView: View {
+    @StateObject var viewModel = LoginViewModel()
     @State private var telenumber = ""
     @State private var isShowing1 = false
     @State private var isShowing2 = false
+    let kapi = ApolloApp().kapi
     
     var body: some View {
         NavigationStack{
@@ -26,7 +28,7 @@ struct LoginView: View {
                     HStack{
                         Text("携帯電話番号")
                         Spacer()
-                        TextField("09012345678", text: $telenumber)
+                        TextField("09012345678", text: $viewModel.phonenumber)
                             .font(.subheadline)
                             .padding(12)
                             .background(Color(.systemGray6))
@@ -34,26 +36,27 @@ struct LoginView: View {
                     .padding(.horizontal)
                 }
                 Divider()
-                Section{
+//                Section{
                     Text("利用規約")
                         .font(.headline)
                         .foregroundStyle(.blue)
                     ScrollView{
-                        TermsOfService(bunsho:termsPrivacyArray[0])
+                        TermsOfService(description: "")
                     }
                     .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                     .border(.cyan, width:0.5)
-                }
+  //              }
                 
                 Section {
                     Text("「送信ボタンを押すことで、上記の利用規約に同意したものとみなします。")
                         .font(.caption)
                         .padding(.vertical)
                 }
-                
-                Section{
+ 
+//                Section{
                     Button(action: {
-                        isShowing1 = true
+                       isShowing1 = true
+                        viewModel.registerPhoneNumber()
                     }){
                         Text("送信")
                             .font(.title2)
@@ -61,8 +64,8 @@ struct LoginView: View {
                             .frame(width: 300, height: 50)
                             .background(Color(.systemCyan))
                     }
-                    .fullScreenCover(isPresented: $isShowing1) {
-                        Verification()
+                    .fullScreenCover(isPresented: $viewModel.showing) {
+                        Verification(viewModel: viewModel)
                     }
                     
                     Button(action: {
@@ -75,12 +78,13 @@ struct LoginView: View {
                         
                     }
                     .fullScreenCover(isPresented: $isShowing2) {
-                        Privacy(bunsho:termsPrivacyArray[0])
+                        Privacy(description: "")
                     }
                     .background(Color(.systemGray6))
                     Spacer()
-                }
                 
+  //              }
+    
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
@@ -91,9 +95,14 @@ struct LoginView: View {
                         .font(.system(size: 18))
                 }
             }
+            
         }
+        
     }
+    
 }
+/*
 #Preview {
     LoginView()
 }
+*/

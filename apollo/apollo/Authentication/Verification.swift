@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct Verification: View {
-    @State private var ninsho = ""
-    @State private var showing = false
+ //   @State public var uid = ""
+ //   @State private var showing = false
+    @ObservedObject var viewModel = LoginViewModel()
+    
     var body: some View {
+  
         NavigationStack{
  
             VStack{
@@ -19,14 +22,15 @@ struct Verification: View {
                 Divider()
                 HStack{
                     Text("認証コード")
-                    TextField("", text: $ninsho, axis: .vertical)
+                    TextField("認証コードを入力してください", text: $viewModel.smsCode, axis: .vertical)
                         .padding(12)
                         .padding(.trailing, 48)
                 }
                 .padding(.horizontal)
                 Divider()
                 Button(action: {
-                    showing = true
+ //                   showing = true
+                    viewModel.verifySmsCode()
                 }){
                     Text("送信")
                         .font(.title2)
@@ -35,8 +39,9 @@ struct Verification: View {
                         .background(Color(.systemCyan))
                 }
                 .padding()
-                .fullScreenCover(isPresented: $showing) {
-                    TopView()
+                .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
+                    MainTabView()
+ //              ChannelListView()
                 }
                 Text("10分経ってもショートメールが届かない場合は、お手数ですが前の画面に戻って、再度お試しください")
                     .padding(.horizontal)
@@ -57,7 +62,8 @@ struct Verification: View {
     }
     
 }
-
+/*
 #Preview {
     Verification()
 }
+*/

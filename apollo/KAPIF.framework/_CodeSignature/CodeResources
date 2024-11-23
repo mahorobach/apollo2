@@ -10,35 +10,35 @@
 		</data>
 		<key>Headers/KAPIF-Swift.h</key>
 		<data>
-		Mp4NIKcTPg9dfsUWkR3mnZNQLyY=
+		knRre3mKCOq4fV8FNZz4DvcdJiI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mY/4WkILwpIIMbVGD8+S+RO9kUY=
+		Jcw1o5y4rhA8uAMC30nwy4vClxk=
 		</data>
 		<key>Modules/KAPIF.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		FSPnLbho3G+LL9smI3XgVOqBIQ4=
+		gcwBsH4BgyFY4sVtNt+/xOKS3vY=
 		</data>
 		<key>Modules/KAPIF.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		61HpJRoE8goZZG1otmPv0xE0kFg=
+		QFnj/89BUaULmA16ljOnFRroODo=
 		</data>
 		<key>Modules/KAPIF.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/iySYz7GSMushB1FBnAJXqxznRc=
+		6Rm5HbSwQJW/+FUqRSKQsjamTCE=
 		</data>
 		<key>Modules/KAPIF.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		FSPnLbho3G+LL9smI3XgVOqBIQ4=
+		gcwBsH4BgyFY4sVtNt+/xOKS3vY=
 		</data>
 		<key>Modules/KAPIF.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		7VF3S21gux6XeigFSg5v/34XXqY=
+		nTLr8G4G8G7rWSdo9xNi5Xc/DdQ=
 		</data>
 		<key>Modules/KAPIF.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		wZZtUyeGzUK0kIVXxgjsAaMk/9U=
+		cXDDB5rOgg+lil3Dx/Yc49toqMY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,49 +58,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6TMb7s8riVc7cS8bB/K3e/JGt44L3XConHY2iPyOGlk=
+			pR6CETyQ0IdlBInkQ4F1ML5IBo8O8YbxttbWS2rtzys=
 			</data>
 		</dict>
 		<key>Modules/KAPIF.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
+			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
 			</data>
 		</dict>
 		<key>Modules/KAPIF.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+yniTCdvGGnYo7wzmUb2vXVr3Lb3zco8JIsEejGJLak=
+			7P9NOg59cJqPduEJbxaIhuDygo2GmbFN7lK0nITgZ+M=
 			</data>
 		</dict>
 		<key>Modules/KAPIF.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7ua4maUmS6+ZHpE1M8zJpmIdBV/0UVjAhzW05Bp5gmA=
+			zfbBbfq0aAHeXN6ZJ4FWKme5NFk6oNSzOS6ZMNF5z98=
 			</data>
 		</dict>
 		<key>Modules/KAPIF.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
+			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
 			</data>
 		</dict>
 		<key>Modules/KAPIF.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+hWu737/ieCzCX9j/Qe4pMSW+xPMB5pVUyomuMxLOHk=
+			VrbVMYMOYuAp3SNKpsCwlY+IjdDKad3FgfyJSZOoHlY=
 			</data>
 		</dict>
 		<key>Modules/KAPIF.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			grCt3RR4cB/3GWQVfmuhII5ZoURZS/AHXqx98RQlVy4=
+			xqcrU1shj0yXeaa4tsMjj4z6eiOGIhLYRWt74lXxRWw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

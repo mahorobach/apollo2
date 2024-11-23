@@ -37,7 +37,7 @@ struct Contact: View {
                     Button(action: {
                         isShowAlert = true
                     }) {
-                        Label("送信", systemImage: "pipeline")
+                        Label("送信", systemImage: "tray.and.arrow.up")
                             .foregroundStyle(.gray)
                         
                     }.alert("", isPresented: $isShowAlert) {

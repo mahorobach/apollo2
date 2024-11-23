@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+//import KAPIF
 
 struct TopView: View {
     @AppStorage("current_user") var user = ""
@@ -20,14 +21,15 @@ struct TopView: View {
     init(){
         UITabBar.appearance().backgroundColor = .white.withAlphaComponent(0.4)
     }
+    let kapi = ApolloApp().kapi
+//    let channelInfo = KAPIF.KAPI.ChannelInfo.self
     
-       
     var body: some View {
         NavigationStack{
             Menu(navigationTitle){
             }
             TabView(selection: $selectedTab){
-                ChannelTabView().tabItem {  Image(systemName: "dot.radiowaves.left.and.right")
+                ChannelListView().tabItem {  Image(systemName: "dot.radiowaves.left.and.right")
                     Text(Tabs.tab1.rawValue)
                 }
                 .tag(Tabs.tab1)
@@ -48,9 +50,43 @@ struct TopView: View {
             
         }
     }
+    /*
+    func channelList() {
+        kapi.getChannelList { result in
+            switch result {
+                case .okChannelList([KAPIF.KAPI.ChannelInfo])            }
+        }
+        kapi.register(keitai: phonenumber) { result in
+            switch result {
+            case .okData(let data) :
+                /*
+                self.uid = data
+                self.showing = true
+                */
+                if data.isEmpty {
+                                self.errorMessage = "UIDデータが空です。"
+                                print("エラー: UIDデータが空")
+                                return
+                            }
+                            self.uid = data
+                            print("取得したUID: \(self.uid?.description ?? "なし")")
+                            self.showing = true
+            case .errorAlert(let alertText):
+                if let alert = alertText {
+                    self.errorMessage = alert.title  + alert.msg
+                    print("エラー: \(self.errorMessage!)")
+                }
+            default :
+                self.errorMessage = "エラー発生"
+                print("エラー: \(self.errorMessage!)")
+            }
+        }
+    }
+     */
 }
 
 
-#Preview {
-    TopView()
-}
+ #Preview {
+ TopView()
+ }
+ 

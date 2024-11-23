@@ -6,18 +6,19 @@
 //
 
 import SwiftUI
-import KAPIF
 
 struct Privacy: View {
     @Environment(\.dismiss) var dismiss
-    let bunsho:TermsAndPrivacyData
-  
-    let bunsho2 = KAPIF.KAPI(delegate: <#T##any KAPIDelegate#>)
+ 
+    var description: String = ""
+ 
+    let privacyText = ApolloApp().kapi.getPrivacyPolicy()
+    let termsAndConditionsText = ApolloApp().kapi.getTermsAndConditions()
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                Text(bunsho.sentences)
+                Text(privacyText)
                 .fontWeight(.light)
                 .font(.footnote)
             }
@@ -31,9 +32,9 @@ struct Privacy: View {
                     .foregroundColor(.blue)
                 }
                 ToolbarItem(placement: .principal) {
-//                    let originalText = KAPIF_framework_zip.getPrivacyPolicy()
-//                        .foregroundColor(.blue)
-//                        .font(.system(size: 18))
+                    Text("利用規約")
+                        .foregroundColor(.blue)
+                        .font(.system(size: 18))
                 }
                 
             }.padding()
@@ -44,5 +45,5 @@ struct Privacy: View {
 
 
 #Preview {
-    Privacy(bunsho:termsPrivacyArray[1])
+    Privacy()
 }

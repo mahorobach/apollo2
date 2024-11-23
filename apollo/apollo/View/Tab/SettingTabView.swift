@@ -24,8 +24,8 @@ struct SettingTabView: View {
                         }
                         
                     }
-                    
-                    Section{
+    
+//                    Section{
                         Button(action: {
                             isShowing = true
                         }){
@@ -40,7 +40,7 @@ struct SettingTabView: View {
                             }
                         }
                         .fullScreenCover(isPresented: $isShowing) {
-                            TermsOfService(bunsho:termsPrivacyArray[0])
+                            TermsOfService(description: "")
                         }
                         
                         Button(action: {
@@ -58,9 +58,11 @@ struct SettingTabView: View {
                             }
                         }
                         .fullScreenCover(isPresented: $isShowing2) {
-                            Privacy(bunsho:termsPrivacyArray[1])
+                            Privacy(description: "")
                         }
-                    }
+ //                   }
+                    
+          
 //                    Section{
 //                        NavigationLink {
 //                            TermsOfService()

@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+//import KAPIF
 
 struct TermsOfService: View {
     @Environment(\.dismiss) var dismiss
-    let bunsho:TermsAndPrivacyData
+    
+    var description: String = ""
+    
+    let termsAndConditions = ApolloApp().kapi.getTermsAndConditions()
+ 
     var body: some View {
         NavigationStack{
             ScrollView {
-                Text(bunsho.sentences)
+                Text(termsAndConditions)
                 .fontWeight(.light)
                 .font(.footnote)
                 
@@ -28,7 +33,7 @@ struct TermsOfService: View {
                     .foregroundColor(.blue)
                 }
                 ToolbarItem(placement: .principal) {
-                    Text(bunsho.title)
+                    Text("利用規約")
                         .foregroundColor(.blue)
                         .font(.system(size: 18))
                 }
@@ -38,5 +43,5 @@ struct TermsOfService: View {
     }
 }
 #Preview {
-    TermsOfService(bunsho:termsPrivacyArray[0])
+    TermsOfService()
 }
