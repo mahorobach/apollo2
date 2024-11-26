@@ -12,8 +12,8 @@ struct TopView: View {
     @AppStorage("current_user") var user = ""
     enum Tabs: String {
         case tab1 = "チャンネル一覧"
-        case tab2 = "チャット一覧"
-        case tab3 = "設定"
+        case tab2 = "チャット一覧2"
+        case tab3 = "設定2"
     }
     @State private var navigationTitle: String = Tabs.tab1.rawValue
     @State private var selectedTab: Tabs = .tab1
