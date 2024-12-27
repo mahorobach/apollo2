@@ -31,7 +31,7 @@ class DummyDelegate: KAPIDelegate{
 
 @main
 struct ApolloApp: App {
-    weak  var delegate: KAPIDelegate?
+    var delegate: KAPIDelegate?
     var kapi = KAPIF.KAPI(delegate: DummyDelegate())
     var body: some Scene {
         WindowGroup {
