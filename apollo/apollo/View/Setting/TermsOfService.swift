@@ -9,11 +9,12 @@ import SwiftUI
 //import KAPIF
 
 struct TermsOfService: View {
+    @EnvironmentObject var appState: ApolloAppState
     @Environment(\.dismiss) var dismiss
     
     var description: String = ""
     
-    let termsAndConditions = ApolloApp().kapi.getTermsAndConditions()
+    let termsAndConditions = ApolloAppState().kapi.getTermsAndConditions()
  
     var body: some View {
         NavigationStack{

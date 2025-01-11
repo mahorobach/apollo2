@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatMessageView: View {
+    @EnvironmentObject var appState: ApolloAppState
     @State private var messangeText = ""
     var body: some View {
         VStack {

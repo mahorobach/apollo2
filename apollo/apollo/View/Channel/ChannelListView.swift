@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
-//import KAPIF
+
 
 struct ChannelListView: View {
-    @StateObject var viewModel = ChannelModel()
-    let kapi = ApolloApp().kapi
-    
-    var body: some View {
+    @EnvironmentObject var appState: ApolloAppState
+    @StateObject var viewModel = ChannelModel(appState: ApolloAppState())
+  
+     var body: some View {
+         
         NavigationStack {
             VStack {
                 if viewModel.errorMessage != nil {
@@ -46,16 +47,16 @@ struct ChannelListView: View {
                                     }
         //                            .navigationTitle("チャンネルリスト")
                                     .onAppear {
-                                        viewModel.fetchChannelList()  //
-                                        let sessionInfo = kapi.getSessionInfo()
-                                        print("セッション情報: \(sessionInfo)")
+                                        
+                                        viewModel.getChannelList()  //
+     
                                     }
                                 }
                             }
                         }
 
-
+/*
 #Preview {
     ChannelListView()
 }
-
+*/

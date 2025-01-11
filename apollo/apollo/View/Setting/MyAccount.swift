@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyAccount: View {
+    @EnvironmentObject var appState: ApolloAppState
     @State var isShow: Bool = false
     @State private var fullname = "赤尾浩史"
     @State private var email = "akao@gmail.com"

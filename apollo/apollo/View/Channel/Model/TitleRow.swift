@@ -5,23 +5,10 @@
 //  Created by 赤尾浩史 on 2023/12/06.
 //
 
-/*
- public struct ChannelInfo : Identifiable {
-
-     /// The stable identity of the entity associated with this instance.
-     public let id: Data
-
-     public let title: String
-
-     public let naiyou: String
-
-     public let isMidoku: Bool
- */
-
 import SwiftUI
 
 struct TitleRow: View {
-    @StateObject var viewModel = ChannelModel()
+    @StateObject var viewModel = ChannelModel(appState: ApolloAppState())
     let title = Title()
     var body: some View {
         VStack{

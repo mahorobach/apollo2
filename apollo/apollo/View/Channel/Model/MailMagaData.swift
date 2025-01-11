@@ -6,21 +6,6 @@
 //
 
 
-/*
- public struct ChannelInfo : Identifiable {
-
-     /// The stable identity of the entity associated with this instance.
-     public let id: Data
-
-     public let title: String
-
-     public let naiyou: String
-
-     public let isMidoku: Bool
- }
- 
- */
-
 import Foundation
 import SwiftUI
 

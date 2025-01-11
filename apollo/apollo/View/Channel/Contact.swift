@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Contact: View {
+    @EnvironmentObject var appState: ApolloAppState
     @State private var isShowAlert = false
     @Environment(\.dismiss) var dismiss
     var body: some View {

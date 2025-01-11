@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct Verification: View {
- //   @State public var uid = ""
- //   @State private var showing = false
-    @ObservedObject var viewModel = LoginViewModel()
-    
-    var body: some View {
+    @EnvironmentObject var appState: ApolloAppState
+    //    @State private var uid = ""
+    //    @State private var showing = false
   
+    @ObservedObject var viewModel : LoginViewModel
+    /*
+     init(viewModel: LoginViewModel) {
+     self.viewModel = viewModel
+     }
+     */
+    var body: some View {
+  //      let _ = viewModel.setAppState(appState)
         NavigationStack{
- 
             VStack{
                 Text("入力された携帯電話番号宛に送信されたショートメール(SMS)に記載された認証コードを下記にご入力ください")
                     .padding()
@@ -29,7 +34,7 @@ struct Verification: View {
                 .padding(.horizontal)
                 Divider()
                 Button(action: {
- //                   showing = true
+                    //                   showing = true
                     viewModel.verifySmsCode()
                 }){
                     Text("送信")
@@ -41,13 +46,13 @@ struct Verification: View {
                 .padding()
                 .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
                     MainTabView()
- //              ChannelListView()
+                        .environmentObject(appState)
                 }
                 Text("10分経ってもショートメールが届かない場合は、お手数ですが前の画面に戻って、再度お試しください")
                     .padding(.horizontal)
                 Spacer()
             }
-//            .background(Color(.systemGroupedBackground))
+   
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(false)
             .navigationBarTitle("本人確認")
@@ -59,11 +64,16 @@ struct Verification: View {
                 }
             }
         }
+        /*
+        .onAppear {
+                    viewModel.setAppState(appState)
+                }
+         */
     }
     
 }
 /*
-#Preview {
-    Verification()
-}
-*/
+ #Preview {
+ Verification()
+ }
+ */

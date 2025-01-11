@@ -9,49 +9,76 @@ import SwiftUI
 import KAPIF
 
 class ChannelModel: ObservableObject {
-    @Published var channelList = [KAPIF.KAPI.ChannelInfo]()
-    @Published var errorMessage: String?
     
-    let kapi = ApolloApp().kapi
-    
-    
-    
-    func fetchChannelList() {
-        // セッション状態を確認
-                if kapi.resetAndRestoreLoginStateIfRegistered_isNowRegistered() {
-                    // セッションが有効ならチャンネルリストを取得
-                    getChannelList()
-                    
-                } else {
-                    // セッションが無効なら再ログイン
-                    errorMessage = "セッションが切れています。再ログインしてください。"
-                    print("セッションが切れています。再ログインが必要です。")
-                }
-            }
-   
+    @Published var channelList : [KAPIF.KAPI.ChannelInfo] = []
+    @Published var messages : [KAPIF.KAPI.ChannelMessageInfo] = []
+    @Published var errorMessage: String? =  nil
+ 
+    private var appState: ApolloAppState
+ 
+    init(appState: ApolloAppState) {
+        self.appState = appState
+    }
+ 
     func getSession() {
-        let  sessionInfo = kapi.getSessionInfo()
+        let  sessionInfo = appState.kapi.getSessionInfo()
         print("現在のセッション情報：\(sessionInfo)")
     }
-    
-    
-    
-    private func getChannelList() {
-        kapi.getChannelList() { result in
+     
+    func getChannelList() {
+        appState.kapi.getChannelList() { result in
             switch result {
             case .okChannelList(let channels):                                    DispatchQueue.main.async {
                 self.channelList = channels
                 print("チャンネルリスト取得成功")
             }
-            case .errorAlert(let alertText):                                    if let alert = alertText {
+            case .errorAlert(let alertText):
+                if let alert = alertText {
                 DispatchQueue.main.async {
                     self.errorMessage = alert.title + ": " + alert.msg
                 }
             }
-            default :                                    DispatchQueue.main.async {
+            default :
+                DispatchQueue.main.async {
                 self.errorMessage = "エラーが発生しました。"
             }
             }
         }
     }
+   
+    
+    func getChannelMessaage(channelID: Data){
+        appState.kapi.getChannelMessageList(channelID: channelID) { result in
+            switch result {
+            case .okChannelMessageList(let messages):
+                DispatchQueue.main.async {
+                    self.messages = messages
+                    print("メッセージ取得成功")
+                }
+            case .errorAlert(let alertText):
+                if let alert = alertText {
+                    DispatchQueue.main.async {
+                        self.errorMessage = alert.title + ": " + alert.msg
+                    }
+                }
+            default:  
+                        DispatchQueue.main.async {
+                            self.errorMessage = "予期せぬエラーが発生しました。"
+                        }
+            }
+        }
+    }
 }
+
+
+/*
+ public struct ChannelMessageInfo : Identifiable {
+
+     /// The stable identity of the entity associated with this instance.
+     public let id: Data
+
+     public let koukaiDate: Date
+
+     public let naiyou: String
+ }
+ */

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct MainTabView: View {
-//    @State private var selectTab = 0
-    let kapi = ApolloApp().kapi
+    @EnvironmentObject var appState: ApolloAppState
+    @State private var selectTab = 0
+//    let appState: ApolloAppState
     enum Tabs: String {
         case tab1 = "チャンネル一覧"
         case tab2 = "チャット一覧"
@@ -24,6 +25,7 @@ struct MainTabView: View {
             }
             TabView (selection: $selectedTab){
                 ChannelListView()
+                    .environmentObject(appState) 
                     .tabItem {
                         VStack{
                             Image(systemName: "dot.radiowaves.left.and.right")
@@ -33,10 +35,9 @@ struct MainTabView: View {
                     }
                     .onAppear{
                         selectedTab = Tabs.tab1
-                        // セッション情報を取得してデバッグコンソールに表示
-                                                let sessionInfo = kapi.getSessionInfo()
-                                                print("セッション情報 (チャンネル一覧): \(sessionInfo)")
+             
                     }
+                    
                     .tag(Tabs.tab1)
                     
                 ChatTabView()
@@ -49,9 +50,10 @@ struct MainTabView: View {
                     }
                     .onAppear{
                         selectedTab = Tabs.tab2
-                        let sessionInfo = kapi.getSessionInfo()
-                                                print("セッション情報 (チャット一覧): \(sessionInfo)")
+                        
                     }
+                    
+                
                     .tag(Tabs.tab2)
                 
                 SettingTabView()
@@ -64,19 +66,22 @@ struct MainTabView: View {
                     }
                     .onAppear{
                         selectedTab = Tabs.tab3
-                        let sessionInfo = kapi.getSessionInfo()
-                                                print("セッション情報 (設定): \(sessionInfo)")
+                        
                     }
+                    
                     .tag(Tabs.tab3)
                 
             }
             .onChange(of: selectedTab) {navigationTitle = selectedTab.rawValue }
-            
+            .onAppear {
+                
+            }
         }
         
     }
 }
-
+/*
 #Preview {
     MainTabView()
 }
+*/

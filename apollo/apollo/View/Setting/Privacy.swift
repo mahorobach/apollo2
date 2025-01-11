@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct Privacy: View {
+    @EnvironmentObject var appState: ApolloAppState
     @Environment(\.dismiss) var dismiss
  
     var description: String = ""
  
-    let privacyText = ApolloApp().kapi.getPrivacyPolicy()
-    let termsAndConditionsText = ApolloApp().kapi.getTermsAndConditions()
+    let privacyText = ApolloAppState().kapi.getPrivacyPolicy()
+    let termsAndConditionsText = ApolloAppState().kapi.getTermsAndConditions()
     
     var body: some View {
         NavigationStack {

@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+
 struct ChatList: View {
+    @EnvironmentObject var appState: ApolloAppState
     var body: some View {
         Text("Chat List")
     }

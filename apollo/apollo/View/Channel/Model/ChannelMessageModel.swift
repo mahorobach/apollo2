@@ -9,13 +9,14 @@ import SwiftUI
 import KAPIF
 
 class ChannelMessageModel: ObservableObject {
-    @Published var messages = [KAPIF.KAPI.ChannelMessageInfo]()
+    @EnvironmentObject var appState: ApolloAppState
+    @Published var messages : [KAPIF.KAPI.ChannelMessageInfo] = []
     @Published var errorMessage: String?
     
-    let kapi = ApolloApp().kapi
+ //   let kapi = AppState().kapi
     
     func fetchMessages(for channelID:Data) {
-        kapi.getChannelMessageList(channelID: channelID) { result in
+        appState.kapi.getChannelMessageList(channelID: channelID) { result in
             switch result {
             case.okChannelMessageList(let messages):
                 DispatchQueue.main.async {

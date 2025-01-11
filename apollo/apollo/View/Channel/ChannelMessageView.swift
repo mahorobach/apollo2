@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ChannelMessageView: View {
-    @StateObject var viewModel = ChannelMessageModel()
+    @EnvironmentObject var appState: ApolloAppState
+    @StateObject var viewModel = ChannelModel(appState: ApolloAppState())
     let channelID: Data
     let channelTitle: String
-    let kapi = ApolloApp().kapi
-    
+  
     var body: some View {
         VStack {
             if let errorMessage = viewModel.errorMessage {
@@ -32,9 +32,8 @@ struct ChannelMessageView: View {
         }
         .navigationTitle(channelTitle)
         .onAppear {
-            viewModel.fetchMessages(for: channelID)
-            let sessionInfo = kapi.getSessionInfo()
-            print("セッション情報: \(sessionInfo)")
+            viewModel.getChannelMessaage(channelID: channelID)
+   
         }
     }
 }

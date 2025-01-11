@@ -4,7 +4,7 @@
 //
 //  Created by 赤尾浩史 on 2023/12/06.
 //
-
+/*
 import SwiftUI
 //import KAPIF
 
@@ -21,7 +21,8 @@ struct TopView: View {
     init(){
         UITabBar.appearance().backgroundColor = .white.withAlphaComponent(0.4)
     }
-    let kapi = ApolloApp().kapi
+    @EnvironmentObject var appState: ApolloAppState
+ //   let kapi = AppState().kapi
 //    let channelInfo = KAPIF.KAPI.ChannelInfo.self
     
     var body: some View {
@@ -29,7 +30,7 @@ struct TopView: View {
             Menu(navigationTitle){
             }
             TabView(selection: $selectedTab){
-                ChannelListView().tabItem {  Image(systemName: "dot.radiowaves.left.and.right")
+                ChannelListView(viewModel: ChannelModel(appState: ApolloAppState)).tabItem {  Image(systemName: "dot.radiowaves.left.and.right")
                     Text(Tabs.tab1.rawValue)
                 }
                 .tag(Tabs.tab1)
@@ -90,3 +91,4 @@ struct TopView: View {
  TopView()
  }
  
+*/

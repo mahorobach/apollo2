@@ -1,22 +1,25 @@
 //
-//  apolloApp.swift
+//  ApolloApp2.swift
 //  apollo
 //
-//  Created by 赤尾浩史 on 2023/10/17.
+//  Created by 赤尾浩史 on 2025/01/06.
 //
 
 import SwiftUI
 import KAPIF
 
-class DummyDelegate: KAPIDelegate{
-  
+class ApolloDelegate: KAPIDelegate{
+    weak var appState: ApolloAppState?
+    
     func kapiError(alert: KAPIF.KAPI.AlertText) {
-        print("KAGURAはメルマガ送信アプリとなり、\n 意見交換、質問の受付は承っておりません。\n\n以前よりご意見やご質問の返信は\n控えていただくようお願いしておりましたが、\n現在も多数のメッセージ送信が続くため\n返信機能は停止しております。")
+        appState?.errorMessage = alert.msg
     }
         func kapiMustUpdate() {
             print("Update Error1")
         }
         func kapiMustLogin() {
+            print("=== デリゲートイベント: ログイン要求 ===")
+            print("現在のスタック: \(Thread.callStackSymbols)")
             print("Login Error 2")
         }
         func kapiMustFinishRegister() {
@@ -27,16 +30,58 @@ class DummyDelegate: KAPIDelegate{
         }
 }
  
+class ApolloAppState: ObservableObject {
+    @Published var authState: AuthState = .notLoggedIn
+    @Published var errorMessage: String?
+    
+    let kapi : KAPIF.KAPI
+    private let authDelegate: ApolloDelegate
+    
+    enum AuthState {
+            case notLoggedIn
+            case loggedIn
+        }
+        
+        init() {
+            self.authDelegate = ApolloDelegate()
+            self.kapi = KAPIF.KAPI(delegate: authDelegate)
+            self.authDelegate.appState = self
+            
+            if kapi.resetAndRestoreLoginStateIfRegistered_isNowRegistered() {
+                        self.authState = .loggedIn
+                    }
+        }
+    
+    func validateSession() -> Bool {
+            let sessionInfo = kapi.getSessionInfo()
+            return !sessionInfo.isEmpty && sessionInfo != "nil"
+        }   
+}
+
+extension ApolloAppState {
+    func debugSession() {
+        print("=== セッション状態のデバッグ ===")
+        print("現在のセッション情報: \(kapi.getSessionInfo())")
+        print("ログイン状態: \(authState)")
+        print("========================")
+    }
+}
 
 
 @main
 struct ApolloApp: App {
-    var delegate: KAPIDelegate?
-    var kapi = KAPIF.KAPI(delegate: DummyDelegate())
+    @StateObject private var apolloAppState = ApolloAppState()
     var body: some Scene {
         WindowGroup {
-
-            LoginView()
+            Group {
+                if apolloAppState.authState == .loggedIn {
+                    MainTabView()
+                        .environmentObject(apolloAppState)
+                } else {
+                    LoginView()
+                        .environmentObject(apolloAppState)
+                }
+            }
         }
     }
 }

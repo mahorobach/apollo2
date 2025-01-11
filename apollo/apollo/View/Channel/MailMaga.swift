@@ -6,25 +6,13 @@
 //
 
 import SwiftUI
-/*
- public struct ChannelInfo : Identifiable {
-
-     /// The stable identity of the entity associated with this instance.
-     public let id: Data
-
-     public let title: String
-
-     public let naiyou: String
-
-     public let isMidoku: Bool
- }
- */
 
 struct MailMaga: View {
+    @EnvironmentObject var appState: ApolloAppState
     @State private var isShowAlert = false
     @Environment(\.dismiss) var dismiss
-    weak  var delegate: DummyDelegate?
-    let alertText2 = ApolloApp().kapi.getTermsAndConditions()
+    weak  var delegate: ApolloDelegate?
+    let alertText2 = ApolloAppState().kapi.getTermsAndConditions()
     
     
     var body: some View {

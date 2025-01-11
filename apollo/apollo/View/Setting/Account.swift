@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct Account: View {
+    @EnvironmentObject var appState: ApolloAppState
     @State var isShow: Bool = false
     @Environment(\.dismiss) var dismiss
     
